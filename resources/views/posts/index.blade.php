@@ -10,10 +10,12 @@
     </head>
     <body class="antialiased">
         <h1>Blog Name</h1>
+
+        <a href="/posts/create">create</a>
         <div class='posts'>
             @foreach ($posts as $post)
-            　<div class='title'>
-                　<h2>{{ $post->title }}</h2>
+            　<div class='post'>
+                　<a href="/posts/{{ $post->id }}"><h2>{{ $post->title }}</h2></a>
                　  <p class='body'>{{ $post->body }}</p>
             　</div>
             @endforeach
